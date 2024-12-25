@@ -1,6 +1,19 @@
+@font-face {
+    font-family: minecraft;
+    src: url(../fonts/minecraft-items.ttf);
+}
+
+@font-face {
+    font-family: colton-gae;
+    src: url(../fonts/Coltan-Gea-Light-demo-FFP.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
+    /* font-family:minecraf; */
+    /* font-family: colton-gae; */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 body{
@@ -8,6 +21,12 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    /* background-image: url(../images/form-background.webp); */
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    background-color: #3b3b3b;
+
 }
 
 .logo{
@@ -18,30 +37,64 @@ body{
 }
 
 .form-container {
-    background-color: #2F2F2F;
+    background-color: #1b1b1b;
     border-radius: 20px 100px / 70px ;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.61);
     width: 850px;
     height:400px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     align-items: center;
-
     padding: 20px;
 }
 
 .step {
     display: none;
-
+    z-index: -1000;
 }
 
 .step.active {
-    display: block;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
+.step.active *{
+    margin: 3vh;
+}
+
+.input-header{
+    text-align: center;
+    color: #FFDA44;
+}
+
+.input-fields{
+    width: 50vh;
+    padding: 2vh;
+    border-radius: 6px;
+    border: none;
+    font-size: large;
+}
+
+.input-btn{
+    width: 20vh;
+    padding: 1.5vh;
+    align-self: center;
+    border: none;
+    border-radius: 7px;
+    background-color: white;
+    font-size: larger;
+}
+
+.input-btn:hover{
+    background-color: rgb(139, 139, 139);    
+    color: white;
+}
+
+.bday{
+    color:#a32f2f ;
+}
+
 /* #4B0082 - purplish blue
 #FFDA44 - goldish yello
 #FFCBA4 - cream 

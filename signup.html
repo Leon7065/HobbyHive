@@ -14,52 +14,48 @@
         <form action="">
 
             <div class="step active" id="step0">
-                <h3>Enter your Full name</h3>
+                <h2 class="input-header">Enter your Full name</h2>
                 <input class="input-fields" type="text" id="fullName" name="fullName" placeholder="John Doe" required>
-                <br>
-                <button type="button" onclick="nextStep(1)">Next</button>
+                <button class="input-btn" type="button" onclick="nextStep(0)">Next</button>
             </div>
 
             <div class="step" id="step1">
-                <h3>Enter your Email</h3>
+                <h2 class="input-header">Enter your Email</h2>
                 <input class="input-fields" type="email" id="email" name="email" placeholder="example@gmail.com" required>
-                <br>
-                <button type="button" onclick="nextStep(2)">Next</button>
+                
+                <button class="input-btn" type="button" onclick="nextStep(1)">Next</button>
             </div>
 
             <div class="step" id="step2">
-                <h3>Enter your nick-Name</h3>
+                <h2 class="input-header">Enter your nick-Name</h2>
                 <input class="input-fields" type="text" id="nickName" name="nickName" placeholder="Optional">
-                <br>
-                <button type="button" onclick="nextStep(3)">Next</button>
+                
+                <button class="input-btn" type="button" onclick="nextStep(2)">Next</button>
             </div>
 
             <div class="step" id="step3">
-                <h3>Enter your Birth-day</h3>
+                <h2 class="input-header">Enter your Birth-day</h2>
                 <input class="input-fields" type="date" name="bday" id="bday" required>
-                <br>
-                <button type="button" onclick="nextStep(4)">Next</button>
-            </div>
                 
+                <button class="input-btn" type="button" onclick="nextStep(3)">Next</button>
+            </div>
 
+            <div class="step" id="step4">
+                <h2 class="input-header">Enter your Password</h2>
+                <input class="input-fields" type="password" name="password" id="password" placeholder="********" required>
+                
+                <button class="input-btn" type="button" onclick="nextStep(4)">Next</button>
+            </div>                
+                
+            <div class="step" id="step5">
+                <h2 class="input-header">Confirm your Password</h2>
+                <input class="input-fields" type="password" name="password" id="password" placeholder="********" required>
+                
+                <button class="input-btn" type="submit" onclick="nextStep(5)">Sing up!</button>
+            </div>                
+                
         </form>
     </div>
     <script src="JS/script.js"></script>
 </body>
 </html>
-                
-                <!-- 
-            <div class="step active" id="step0">
-                <h3>Choose your hobby!</h3>
-                <select name="hobby-select" id="hobby-select" multiple>
-                    <option value=""></option>
-                    <option value="photography">Photography</option>
-                    <option value="cooking">Cooking</option>
-                    <option value="reading">Reading</option>
-                    <option value="guitar">Guitar</option>
-                    <option value="guitar">Guitar</option>
-                    <option value="guitar">Guitar</option>
-                    <option value="guitar">Guitar</option>
-                    <option value="guitar">Guitar</option>
-                </select>
-            </div> -->
