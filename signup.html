@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="CSS/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" >
 </head>
 <body>
     
@@ -38,7 +39,53 @@
                 <input class="input-fields" type="date" name="bday" id="bday" required>
                 
                 <button class="input-btn" type="button" onclick="nextStep(3)">Next</button>
+            </div>                
+                
+            <!-- ================== Multiple select ==================== -->
+
+            <div class="container">
+                <div class="select-btn">
+                    <span class="btn-text">Select Language</span>
+                    <span class="arrow-down">
+                        <i class="fa-solid fa-arrow-down-long"></i> 
+                    </span>
+                </div>
+        
+                <ul class="list-items">
+                    <li class="item">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">Photography</span>
+                    </li>
+                    <li class="item">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">Cooking</span>
+                    </li>
+                    <li class="item">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">Guitar</span>
+                    </li>
+                    <li class="item">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">Drawing</span>
+                    </li>
+                    <li class="item">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">Singing</span>
+                    </li>
+                </ul>
             </div>
+
+            <!-- ================== Multiple select ==================== -->
 
             <div class="step" id="step4">
                 <h2 class="input-header">Enter your Password</h2>
@@ -52,8 +99,8 @@
                 <input class="input-fields" type="password" name="password" id="password" placeholder="********" required>
                 
                 <button class="input-btn" type="submit" onclick="nextStep(5)">Sing up!</button>
-            </div>                
-                
+            </div>
+
         </form>
     </div>
     <script src="JS/script.js"></script>
