@@ -23,7 +23,6 @@ items.forEach(item => {
     });
 });
 
-// Function to confirm and hide the container if any items are checked
 function confirm() {
     const container = document.querySelector('.container');
     const checked = document.querySelectorAll(".checked");
