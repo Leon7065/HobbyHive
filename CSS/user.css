@@ -1,0 +1,134 @@
+@font-face {
+    font-family: Josefin Slab;
+    src: url(../fonts/Josefin_Slab/JosefinSlab-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Josefin Slab bold;
+    src: url(../fonts/Josefin_Slab/static/JosefinSlab-SemiBold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Josefin Slab;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #3b3b3b;
+}
+
+/* ======================================================== left nav-bar ======================================================== */
+
+.left{
+    padding: 10vh 10vh 0vh 5vh;
+    color: white;
+}
+
+.left h1{
+    margin-bottom: 6vh;
+}
+
+#title{
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+}
+
+#nav-bar-ul{
+    list-style-type: none;
+}
+
+#nav-bar-options,#log-out{
+    padding: 2vh;
+    margin: 1vh;
+    border-radius: 7px;
+    font-size: larger;
+    transition: background-color 0.3s ease;
+}
+
+#nav-bar-options:hover,#log-out:hover{
+    background-color: #5a533a;
+}
+
+#nav-bar-options a, #log-out a{
+    text-decoration: none;
+    color: white;
+}
+
+#log-out{
+    margin-top: 120%;
+}
+
+/* ======================================================== right section ======================================================== */
+
+#left-right-hr{
+    height: 110vh; 
+    border-color: #FFDA44;
+}
+.right{
+    padding: 15vh;
+    flex-grow: 3;
+}
+
+#pfp{
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#profile{
+    display: flex;
+}
+
+#profile-txt{
+    padding-left: 10vh;
+    font-size:5vh;
+    color: white;
+}
+
+#u-e-container{
+    display: flex;
+}
+
+#profile-txt p{
+    padding: 3.5vh;
+}
+
+#edit-btn{
+    margin: 4vh;
+    margin-left: 20vh;
+    width: 30vh;
+    height: 5vh;
+    background-color: #FFDA44;
+    border: none;
+    font-size: 18px;
+    font-family: Josefin Slab bold;
+    border-radius: 7px;
+    transition: background-color 0.3s ease-in;
+}
+
+#edit-btn:hover{
+    background-color: #d4b63e;
+}
+
+#edit-btn:active{
+    background-color: #c7aa36;
+}
+
+#activity{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#activity li{
+    padding: 2vh;
+    padding-top: 4vh;
+    font-size:5vh;
+    color: white;
+}
