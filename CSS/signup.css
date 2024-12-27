@@ -1,20 +1,19 @@
 @font-face {
-    font-family: minecraft;
-    src: url(../fonts/minecraft-items.ttf);
+    font-family: Josefin Slab;
+    src: url(../fonts/Josefin_Slab/JosefinSlab-VariableFont_wght.ttf);
 }
 
 @font-face {
-    font-family: colton-gae;
-    src: url(../fonts/Coltan-Gea-Light-demo-FFP.ttf);
+    font-family: Josefin Slab bold;
+    src: url(../fonts/Josefin_Slab/static/JosefinSlab-SemiBold.ttf);
 }
 
 *{
     margin: 0;
     padding: 0;
-    /* font-family:minecraf; */
-    /* font-family: colton-gae; */
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Josefin Slab;
 }
+
 
 body{
     display: flex;

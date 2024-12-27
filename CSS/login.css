@@ -1,0 +1,97 @@
+@font-face {
+    font-family: Josefin Slab;
+    src: url(../fonts/Josefin_Slab/JosefinSlab-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Josefin Slab bold;
+    src: url(../fonts/Josefin_Slab/static/JosefinSlab-SemiBold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Josefin Slab;
+    font-weight: 600;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #3b3b3b;
+}
+
+.form-container {
+    background-color: #1b1b1b;
+    border-radius: 100px 20px / 70px ;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.61);
+    width: 600px;
+    height:400px;
+    padding: 6vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#title{
+    padding: 1vh;
+    margin: 2vh;
+}
+
+#logo{
+    width: 24vh;
+    border-radius: 10px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    padding: 4vh;
+    background-color: #3b3b3b;
+    border-radius: 15px;
+}
+
+.input input{
+    /* padding: 10px;
+    margin: 10px; */
+    width: 40vh;
+    padding: 2vh;
+    margin: 1vh;
+}
+
+.input h3{
+    margin: 1vh;
+}
+
+.password-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* <div class="form-container">
+        <div class="title-container">
+            <img src="images/logo-name-bottom.jpg" id="logo" alt="">
+            <h2 id="title">Log in to HobbyHive</h2>
+        </div>
+        <div class="input">
+            <h3>Username or email address</h3>
+            <input type="text" name="username" id="email-input">
+            <div class="password-container">
+                <h3>Password</h3>
+                <h3><a href="">Forgot Password?</a></h3>
+            </div>
+            <input type="password" name="password" id="password-input">
+            <input type="submit" name="password" id="password-input" value="Log in">
+        </div>
+    </div> */
