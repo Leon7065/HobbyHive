@@ -155,16 +155,25 @@ body {
         font-size: 2.5vh;
     }
 
+    #profile-txt p{
+        padding: 0;
+    }
+
     #activity {
         font-size: 2vh;
     }
-    #edit-btn {
-        width: 100%;
-        text-align: center;
-        margin-left: 2vh;
+
+    #activity li {
+        padding: 1vh;
+        padding-top: 2vh;
+        font-size:2.5vh;
     }
 
-
+    #edit-btn {
+        width: 50%;
+        text-align: center;
+        margin: 0 0 0 10vh;
+    }
 }
 
 @media (max-width: 480px) {
@@ -180,7 +189,7 @@ body {
     #edit-btn {
         width: 100%;
         text-align: center;
-        margin-left: 2vh;
+        margin:0 2vh 0 0;
     }
 
     #activity {
