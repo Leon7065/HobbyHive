@@ -60,38 +60,52 @@ body{
     padding: 4vh;
     background-color: #3b3b3b;
     border-radius: 15px;
+    color: white;
 }
 
 .input input{
-    /* padding: 10px;
-    margin: 10px; */
+    font-size: large;
     width: 40vh;
-    padding: 2vh;
+    padding: 1.5vh;
+    margin-top: 0;
     margin: 1vh;
+    border-radius: 7px;
+    border: none;
 }
 
 .input h3{
+    font-size:17px;
     margin: 1vh;
+    margin-bottom: 0;
 }
 
 .password-container{
     display: flex;
     justify-content: space-between;
 }
+a{
+    color: #FFDA44;
+}
 
-/* <div class="form-container">
-        <div class="title-container">
-            <img src="images/logo-name-bottom.jpg" id="logo" alt="">
-            <h2 id="title">Log in to HobbyHive</h2>
-        </div>
-        <div class="input">
-            <h3>Username or email address</h3>
-            <input type="text" name="username" id="email-input">
-            <div class="password-container">
-                <h3>Password</h3>
-                <h3><a href="">Forgot Password?</a></h3>
-            </div>
-            <input type="password" name="password" id="password-input">
-            <input type="submit" name="password" id="password-input" value="Log in">
-        </div>
-    </div> */
+button{
+    width: 96%;
+    align-self: center;
+    text-align: center;
+    padding: 2vh;
+    border-radius: 7px;
+    border: none;
+    margin: 1vh;
+    margin-top: 3vh;
+    background-color: #FFDA44;
+    font-size: 17px;
+}
+
+button:active{
+    background-color: #ceb037;
+}
+
+#register{
+    margin: 1vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
