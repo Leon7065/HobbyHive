@@ -45,8 +45,12 @@
             <li><strong>15</strong> Following</li>
             <li><strong>15</strong> Followers</li>
         </ul>
-        
         <hr>
+
+        <div class="create">
+            
+        </div>
+
     </div>
 
 

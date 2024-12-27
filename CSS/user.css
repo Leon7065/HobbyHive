@@ -105,15 +105,15 @@ body{
     font-size: 18px;
     font-family: Josefin Slab bold;
     border-radius: 7px;
-    transition: background-color 0.3s ease-in;
+    transition: background-color 0.2s ;
 }
 
 #edit-btn:hover{
-    background-color: #d4b63e;
+    background-color: #b69c34;
 }
 
 #edit-btn:active{
-    background-color: #c7aa36;
+    background-color: #FFDA44;
 }
 
 #activity{
