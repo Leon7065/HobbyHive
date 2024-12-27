@@ -8,41 +8,39 @@
     src: url(../fonts/Josefin_Slab/static/JosefinSlab-SemiBold.ttf);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Josefin Slab;
 }
 
-body{
+body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: #3b3b3b;
 }
 
-/* ======================================================== left nav-bar ======================================================== */
-
-.left{
+.left {
     padding: 10vh 10vh 0vh 5vh;
     color: white;
 }
 
-.left h1{
+.left h1 {
     margin-bottom: 6vh;
 }
 
-#title{
+#title {
     font-weight: 400;
     color: white;
     text-decoration: none;
 }
 
-#nav-bar-ul{
+#nav-bar-ul {
     list-style-type: none;
 }
 
-#nav-bar-options,#log-out{
+#nav-bar-options, #log-out {
     padding: 2vh;
     margin: 1vh;
     border-radius: 7px;
@@ -50,52 +48,52 @@ body{
     transition: background-color 0.3s ease;
 }
 
-#nav-bar-options:hover,#log-out:hover{
+#nav-bar-options:hover, #log-out:hover {
     background-color: #5a533a;
 }
 
-#nav-bar-options a, #log-out a{
+#nav-bar-options a, #log-out a {
     text-decoration: none;
     color: white;
 }
 
-/* ======================================================== right section ======================================================== */
-
-#left-right-hr{
-    height: 110vh; 
+#left-right-hr {
+    height: auto;
     border-color: #FFDA44;
 }
-.right{
+
+.right {
     padding: 15vh;
     flex-grow: 3;
 }
 
-#pfp{
+#pfp {
     object-fit: cover;
     width: 200px;
     height: 200px;
     border-radius: 50%;
 }
 
-#profile{
+#profile {
     display: flex;
 }
 
-#profile-txt{
+#profile-txt {
     padding-left: 10vh;
     font-size:5vh;
     color: white;
 }
 
-#u-e-container{
+#u-e-container {
     display: flex;
 }
 
-#profile-txt p{
+#profile-txt p {
     padding: 3.5vh;
 }
 
-#edit-btn{
+
+#edit-btn {
     margin: 4vh;
     margin-left: 20vh;
     width: 30vh;
@@ -108,21 +106,21 @@ body{
     transition: background-color 0.2s ;
 }
 
-#edit-btn:hover{
+#edit-btn:hover {
     background-color: #b69c34;
 }
 
-#edit-btn:active{
+#edit-btn:active {
     background-color: #FFDA44;
 }
 
-#activity{
-    list-style: none;
+#activity {
+     list-style: none;
     display: flex;
     justify-content: space-around;
 }
 
-#activity li{
+#activity li {
     padding: 2vh;
     padding-top: 4vh;
     font-size:5vh;
@@ -131,8 +129,63 @@ body{
 
 
 
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .left {
+        padding: 2vh 5vw;
+    }
+
+    #left-right-hr {
+        display: none;
+    }
+
+    .right {
+        padding: 5vh 5vw;
+    }
+
+    #pfp {
+        width: 100px;
+        height: 100px;
+    }
+
+    #profile-txt {
+        font-size: 2.5vh;
+    }
+
+    #activity {
+        font-size: 2vh;
+    }
+    #edit-btn {
+        width: 100%;
+        text-align: center;
+        margin-left: 2vh;
+    }
 
 
+}
 
+@media (max-width: 480px) {
+    #profile-txt {
+        font-size: 2vh;
+        padding-left: 0;
+    }
 
+    #profile-txt *{
+        padding-left: 0;
+    }
+
+    #edit-btn {
+        width: 100%;
+        text-align: center;
+        margin-left: 2vh;
+    }
+
+    #activity {
+        flex-direction: column;
+        align-items: center;
+    }
+} 
 
