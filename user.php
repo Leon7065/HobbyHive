@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="CSS/user.css">
 </head>
 <body>
-
+ 
     <div class="left">
         <h1 ><a id="title" href="user.php">HobbyHive</a></h1>
         <ul id="nav-bar-ul">
@@ -78,14 +78,26 @@
         </div> 
     </div>
 
-    <div class="preview">
+    <div class="preview" style="display: none;">
+
+        <div class="post-image">
+            <img src="images/dostikaftjall.png" alt="Post Image" class="post-img">
+        </div>
 
         <div class="post-content">
             <div class="post-profile">
-
+                <div class="header">
+                    <img src="" alt="Profile picture">
+                    <p></p>
+                </div>
+                <i class="fa-solid fa-ellipsis"></i>
             </div>
-            <div class="comments">
 
+            <div class="comments">
+                <div class="description">
+                    <img src="" alt="Profile picture">
+                    <p></p>
+                </div>
             </div>
             
         </div>
