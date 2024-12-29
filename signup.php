@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="CSS/signup.css">
 </head>
 <body>
+
   <div class="container">
     <!-- Title section -->
     <!-- <div class="title">Registration</div> -->
