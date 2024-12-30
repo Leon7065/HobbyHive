@@ -82,22 +82,41 @@
 
         <div class="post-image">
             <img src="images/dostikaftjall.png" alt="Post Image" class="post-img">
+            <hr>
+            <p class="description"></p>
         </div>
 
         <div class="post-content">
             <div class="post-profile">
                 <div class="header">
                     <img src="" alt="Profile picture">
-                    <p></p>
+                    <strong>Username</strong>
                 </div>
                 <i class="fa-solid fa-ellipsis"></i>
             </div>
 
             <div class="comments">
-                <div class="description">
+
+                <ul class="comment">
+
                     <img src="" alt="Profile picture">
-                    <p></p>
-                </div>
+                    
+                    <div class="comment-content">
+                        
+                        <div class="comment-text">
+                            <p><strong>Username</strong>description</p>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+                        <div class="comment-interactions">
+                            <p>timestamp</p>
+                            <p>likes</p>
+                            <p>reply</p>
+                        </div>
+                    
+                    </div>
+                </ul>
+        
             </div>
             
         </div>

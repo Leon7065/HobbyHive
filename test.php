@@ -3,75 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .center {
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-}
-
-.article-card {
-  width: 350px;
-  height: 220px;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 300ms;
-}
-
-.article-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-.article-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.article-card .content {
-  box-sizing: border-box;
-  width: 100%;
-  position: absolute;
-  padding: 30px 20px 20px 20px;
-  height: auto;
-  bottom: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
-}
-
-.article-card .date,
-.article-card .title {
-  margin: 0;
-}
-
-.article-card .date {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 4px;
-}
-
-.article-card .title {
-  font-size: 17px;
-  color: #fff;
-}
-    </style>
-</head>
+    <title>test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/test.css">
+  </head>
 <body>
-    
-<div class="center">
-          <div class="article-card">
-            <div class="content">
-              <p class="date">Jan 1, 2022</p>
-              <p class="title">Article Title Goes Here</p>
-            </div>
-            <img src="https://images.unsplash.com/photo-1482877346909-048fb6477632?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=958&q=80" alt="article-cover" />
-          </div>
+    <div class="preview">
+        <div class="post-image">
+            <img src="images/dostikaftjall.png" alt="Post Image" class="post-img">
+            <hr>
+            <p class="description">lorem llapallapallapallapallapa</p>
         </div>
 
+        <div class="post-content">
+            <div class="post-profile">
+                <div class="header">
+                    <img src="" alt="Profile picture">
+                    <strong>Username</strong>
+               </div>
+               <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <hr>
+            <div class="comments">
+                <div class="comment">
+
+                    <img src="" alt="Profile picture">
+
+                    <div class="comment-content">
+
+                        <div class="comment-text">
+                            <p><strong>Username</strong>description</p>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+                        <div class="comment-interactions">
+                            <p>timestamp</p>
+                            <p>likes</p>
+                            <p>reply</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+           </div>
+      </div>
+<!-- 
+======================== ADD INTERACTIVITY AND "ADD COMMENT"      
+-->
 </body>
 </html>
