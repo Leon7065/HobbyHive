@@ -15,15 +15,14 @@
 
     <div class="preview">
         <div class="post-image">
-            <img src="images/dostikaftjall.png" alt="Post Image" class="post-img">
-            <!-- <hr> -->
-            <p class="description">lorem llapallapallapallapallapa</p>
+            <img src="images/hive-bg.jpg" alt="Post Image" class="post-img">
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eum animi ratione nisi nihil eaque similique, sapiente laudantium voluptatibus, explicabo dolore temporibus dolorum omnis ipsa est, repellat dolorem nemo minus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odit consectetur laboriosam. Dignissimos, voluptate? Doloremque, animi. Suscipit praesentium ea quia ducimus possimus. Iste aliquam debitis ab quos nesciunt vero consequatur!</p>
         </div>
 
         <div class="post-content">
             <div class="post-profile">
                 <div class="header">
-                    <img src="images/dog.jpg" class="pfp" alt="Profile picture">
+                    <img src="images/Jon_Snow.png" class="pfp" alt="Profile picture">
                     <strong>Username</strong>
                </div>
                <i class="fa-solid fa-ellipsis"></i>
@@ -35,7 +34,7 @@
                 <div class="comment">
                     <div class="comment-content" >
                         <div class="comment-text">
-                            <img src="images/dog.jpg" class="pfp" alt="Profile picture">
+                            <img src="images/" class="pfp" alt="Profile picture">
                             <p><strong>Username</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laborum culpa autem adipisci quasi accusamus nam inventore consectetur illo praesentium! Earum provident nulla harum voluptatum voluptas cupiditate asperiores dicta culpa.</p>
                         </div>
                         <i class="fa-regular fa-heart" style="transform: translateY(10px);"></i>
@@ -51,7 +50,7 @@
                 <div class="comment">
                     <div class="comment-content" >
                         <div class="comment-text">
-                            <img src="images/dog.jpg" class="pfp" alt="Profile picture">
+                            <img src="images/" class="pfp" alt="Profile picture">
                             <p><strong>Username</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laborum culpa autem adipisci quasi accusamus nam inventore consectetur illo praesentium! Earum provident nulla harum voluptatum voluptas cupiditate asperiores dicta culpa.</p>
                         </div>
                         <i class="fa-regular fa-heart" style="transform: translateY(10px);"></i>
@@ -67,7 +66,7 @@
                 <div class="comment">
                     <div class="comment-content" >
                         <div class="comment-text">
-                            <img src="images/dog.jpg" class="pfp" alt="Profile picture">
+                            <img src="images/" class="pfp" alt="Profile picture">
                             <p><strong>Username</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laborum culpa autem adipisci quasi accusamus nam inventore consectetur illo praesentium! Earum provident nulla harum voluptatum voluptas cupiditate asperiores dicta culpa.</p>
                         </div>
                         <i class="fa-regular fa-heart" style="transform: translateY(10px);"></i>
@@ -87,12 +86,9 @@
             <hr style="margin: 2px;">
 
             <div class="interactivity">
-                <div class="like-section">
-                    <i class="fa-regular fa-heart" id="like" ></i>
-                    <p>Like?</p>
-                </div>    
+                <button class="like-button"><i class="fa-regular fa-heart" id="like" ></i> Like?</button>
                 <form action="" class="add-comment">
-                    <input type="text" placeholder="Add a comment...">
+                    <input type="text" placeholder="Add a comment..." required>
                     <button type="submit">post</button>
                 </form>
             </div>

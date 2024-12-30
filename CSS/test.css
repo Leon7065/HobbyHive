@@ -4,10 +4,11 @@
 }
     
 body{
-    background-image: url(../images/dostikaftjall.png);
+    /* background-image: url(../images/explorer-sc.png); */
 }
 
 .preview{
+    z-index: 5;
     display: flex;
     border: 1px solid black;
     width: fit-content;
@@ -17,6 +18,10 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 15px;
+    padding: 15px;
+    background-color: #3b3b3bad;
+    backdrop-filter: blur(10px);
+    color: white;
 }    
 
 .post-content{
@@ -33,11 +38,18 @@ body{
     padding-left: 0;
 }
 
+.description{
+    max-width: 500px;
+    overflow-y: scroll;
+    height: 17vh;
+}
+
 .post-img {
     height: auto;
     object-fit: cover;
     max-width: 500px;
     border-radius: 15px 0 / 15px ;
+    padding-bottom: 15px;
 } 
 
 .pfp {
@@ -45,7 +57,7 @@ body{
     height: 40px;
     min-width: 40px;
     min-height: 40px;
-
+    object-fit:cover;
     border-radius: 50%;
     margin-right: 5px;
 }
@@ -54,7 +66,7 @@ body{
     padding:15px ;
     padding-left: 0;
     overflow-y: scroll;
-    height: 200px;
+    height: 220px;
 }
 
 .fa-heart{
@@ -85,41 +97,59 @@ body{
     padding-left: 0;
 }
 
-.like-section{
-    display: flex;
-    width: fit-content;
-    align-items: center;
+.like-button{
     padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: inherit;
+    color: white;
+    transition: background-color 0.3s ease;
 }
 
-.like-section p{
-    margin-bottom: 1px;
-    padding-left: 8px;
+.like-button:active{
+    /* background-color: #3b3b3b; */
+    background-color: red;
 }
 
-.like-section:hover{    
-    background-color: aqua;
+.like-button:hover{
+    background-color: #646464ad;
 }
 
 .add-comment{
     padding: 8px;
     display: flex;
     justify-content: space-between;
+    
 }   
 
 .add-comment input{
     border: none;
     padding: 5px;
     width: 80%;
+    border-radius: 10px;
+    background-color: inherit;
+    color: white;
 }
+
+.add-comment input::placeholder{
+    color: white;
+} 
 
 .add-comment button{
     width: 20%;
     border: none;
     border-radius: 10px;
     padding-bottom: 4px;
+    transition: background-color 0.3s ease;
+    color: white;
+    background: inherit;
+    margin-left: 5px;
+}
+
+.add-comment button:hover{
+    background-color: #646464ad;
 }
 
 .add-comment button:active{
-    background-color: red;
+    background-color: #313131ad;
 }

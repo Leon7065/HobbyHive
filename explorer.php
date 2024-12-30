@@ -37,7 +37,7 @@
                 <div class="post-header">
                     <img class="post-profile-pic" src="images/wëlltër.jpg" alt="Profile Picture">
                     <div class="post-user-info">
-                        <h3 class="post-username">Beqir Lokaj</h3>
+                        <h3 class="post-username">username</h3>
                         <p class="post-timestamp">2 hours ago</p>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                 <!-- Description Section -->
                 <div class="post-description">
                     <p>
-                        erdh dosti ka shpija kthea kftjall
+                        description
                     </p>
                 </div>
     
