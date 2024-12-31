@@ -78,51 +78,5 @@
         </div> 
     </div>
 
-    <div class="preview" style="display: none;">
-
-        <div class="post-image">
-            <img src="images/dostikaftjall.png" alt="Post Image" class="post-img">
-            <hr>
-            <p class="description"></p>
-        </div>
-
-        <div class="post-content">
-            <div class="post-profile">
-                <div class="header">
-                    <img src="" alt="Profile picture">
-                    <strong>Username</strong>
-                </div>
-                <i class="fa-solid fa-ellipsis"></i>
-            </div>
-
-            <div class="comments">
-
-                <ul class="comment">
-
-                    <img src="" alt="Profile picture">
-                    
-                    <div class="comment-content">
-                        
-                        <div class="comment-text">
-                            <p><strong>Username</strong>description</p>
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-
-                        <div class="comment-interactions">
-                            <p>timestamp</p>
-                            <p>likes</p>
-                            <p>reply</p>
-                        </div>
-                    
-                    </div>
-                </ul>
-        
-            </div>
-            
-        </div>
-
-    </div>
-            
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
 </body>
 </html>
