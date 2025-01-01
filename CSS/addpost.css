@@ -13,7 +13,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    display: none; /* Initially hidden */
+    display: none;
 }
 
 .create-post-card {
@@ -29,7 +29,7 @@
     max-width: 500px;
     backdrop-filter: blur(8px);
     color: white;
-    display: none; /* Initially hidden */
+    display: none;
     z-index: 1001;
 }
 

@@ -11,12 +11,19 @@
 </head>
 <body>
 
+    <div class="show"><p>click</p></div>
+
+    <div id="overlay"></div>
+
     <!-- if there is no image: description and under that comments -->
 
     <div class="preview">
         <div class="post-image">
             <img src="images/hive-bg.jpg" alt="Post Image" class="post-img">
-            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eum animi ratione nisi nihil eaque similique, sapiente laudantium voluptatibus, explicabo dolore temporibus dolorum omnis ipsa est, repellat dolorem nemo minus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odit consectetur laboriosam. Dignissimos, voluptate? Doloremque, animi. Suscipit praesentium ea quia ducimus possimus. Iste aliquam debitis ab quos nesciunt vero consequatur!</p>
+            <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eum animi ratione nisi nihil eaque similique, sapiente laudantium voluptatibus, explicabo dolore temporibus dolorum omnis ipsa est, repellat dolorem nemo minus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odit consectetur laboriosam. Dignissimos, voluptate? Doloremque, animi. Suscipit praesentium ea quia ducimus possimus. Iste aliquam debitis ab quos nesciunt vero consequatur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, sunt saepe? Molestias mollitia quisquam ex distinctio ratione necessitatibus nostrum odit optio? Odio voluptatibus quam quis tenetur ab sequi doloribus numquam?
+            </p>
         </div>
 
         <div class="post-content">
@@ -37,63 +44,32 @@
                             <img src="images/" class="pfp" alt="Profile picture">
                             <p><strong>Username</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laborum culpa autem adipisci quasi accusamus nam inventore consectetur illo praesentium! Earum provident nulla harum voluptatum voluptas cupiditate asperiores dicta culpa.</p>
                         </div>
-                        <i class="fa-regular fa-heart" style="transform: translateY(10px);"></i>
+                        <i class="fa-regular fa-heart comment-like" style="transform: translateY(10px);"></i>
                     </div>
 
                     <div class="comment-interactions">
                         <p>timestamp</p>
-                        <p>likes</p>
-                        <p>reply</p>
-                       <i class="fa-solid fa-ellipsis" style="transform: translateY(4px);"></i>
+                        <p>15 likes</p>
+                        <i class="fa-solid fa-ellipsis" style="transform: translateY(4px);"></i>
                     </div>
                 </div>
-                <div class="comment">
-                    <div class="comment-content" >
-                        <div class="comment-text">
-                            <img src="images/" class="pfp" alt="Profile picture">
-                            <p><strong>Username</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laborum culpa autem adipisci quasi accusamus nam inventore consectetur illo praesentium! Earum provident nulla harum voluptatum voluptas cupiditate asperiores dicta culpa.</p>
-                        </div>
-                        <i class="fa-regular fa-heart" style="transform: translateY(10px);"></i>
-                    </div>
-
-                    <div class="comment-interactions">
-                        <p>timestamp</p>
-                        <p>likes</p>
-                        <p>reply</p>
-                       <i class="fa-solid fa-ellipsis" style="transform: translateY(4px);"></i>
-                    </div>
-                </div>
-                <div class="comment">
-                    <div class="comment-content" >
-                        <div class="comment-text">
-                            <img src="images/" class="pfp" alt="Profile picture">
-                            <p><strong>Username</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laborum culpa autem adipisci quasi accusamus nam inventore consectetur illo praesentium! Earum provident nulla harum voluptatum voluptas cupiditate asperiores dicta culpa.</p>
-                        </div>
-                        <i class="fa-regular fa-heart" style="transform: translateY(10px);"></i>
-                    </div>
-
-                    <div class="comment-interactions">
-                        <p>timestamp</p>
-                        <p>likes</p>
-                        <p>reply</p>
-                       <i class="fa-solid fa-ellipsis" style="transform: translateY(4px);"></i>
-                    </div>
-                </div>
-                
-
             </div>
 
             <hr style="margin: 2px;">
 
             <div class="interactivity">
-                <button class="like-button"><i class="fa-regular fa-heart" id="like" ></i> Like?</button>
+                <div class="like-section">
+                    <button class="like-button" id="like-btn"><i class="fa-regular fa-heart" id="like" ></i> <span class="like-text">Like?</span></button>
+                    <p>37 likes</p>
+                </div>
                 <form action="" class="add-comment">
                     <input type="text" placeholder="Add a comment..." required>
-                    <button type="submit">post</button>
+                    <button type="submit" id="post-comment">post</button>
                 </form>
             </div>
 
         </div>
     </div>
+    <script src="JS/post-preview.js" ></script>
 </body>
 </html>

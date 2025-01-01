@@ -165,7 +165,6 @@ body {
     }
 }
 
-/* General Styles */
 .post {
     background-color: #2c2c2c;
     color: white;
@@ -177,7 +176,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Header Section */
+
 .post-header {
     display: flex;
     align-items: center;
@@ -207,7 +206,7 @@ body {
     margin: 0;
 }
 
-/* Image Section */
+
 .post-image {
     margin: 15px 0;
     border-radius: 10px;
@@ -221,14 +220,14 @@ body {
     object-fit: cover;
 }
 
-/* Description Section */
+
 .post-description {
     margin: 10px 0;
     font-size: 1rem;
     color: #ddd;
 }
 
-/* Interaction Section */
+
 .post-interactions {
     display: flex;
     justify-content: space-between;

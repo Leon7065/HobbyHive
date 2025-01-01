@@ -11,7 +11,6 @@
 
 <button id="show-create-post-btn">Show</button>
 
-<!-- Background Overlay -->
 <div id="overlay"></div>
 
     <div class="create-post-card">
@@ -38,60 +37,6 @@
             <button id="post-btn" type="submit">Post</button>
         </form>
     </div>
-    <script>
-// Select Elements
-const showCreatePostBtn = document.getElementById('show-create-post-btn');
-const overlay = document.getElementById('overlay');
-const createPostCard = document.querySelector('.create-post-card');
-const postBtn = document.getElementById('post-btn');
-const imageUpload = document.getElementById('image-upload');
-const description = document.getElementById('description');
-const hobbies = document.getElementById('hobbies');
-
-// Function to Show Create Post Card
-function showCreatePostCard() {
-    overlay.style.display = 'block';
-    createPostCard.style.display = 'block';
-}
-
-// Function to Hide Create Post Card
-function hideCreatePostCard() {
-    overlay.style.display = 'none';
-    createPostCard.style.display = 'none';
-}
-
-// Validate Form Fields
-function validateForm() {
-    const descriptionValue = description.value.trim();
-    const hobbiesSelected = Array.from(hobbies.selectedOptions).length > 0;
-
-    if (!descriptionValue) {
-        alert('Please enter a description.');
-        return false;
-    }
-
-    if (!hobbiesSelected) {
-        alert('Please select at least one hobby.');
-        return false;
-    }
-
-    return true;
-}
-
-// Event Listeners
-showCreatePostBtn.addEventListener('click', showCreatePostCard);
-
-overlay.addEventListener('click', hideCreatePostCard);
-
-postBtn.addEventListener('click', (e) => {
-    e.preventDefault(); // Prevent form submission for demo
-    if (validateForm()) {
-        hideCreatePostCard();
-    }
-});
-
-
-    </script>
-
+    <script src="JS/addpost.js"></script>
 </body>
 </html>

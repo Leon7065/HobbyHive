@@ -242,17 +242,3 @@ body {
 .card:hover .interactioins {
     opacity: 1; 
 }
-
-
-/*
-<div class="card">
-    <img id="card-image" src="images/Jon_Snow.png" alt="Avatar">
-    <div class="interactioins">
-        <i class="fa-solid fa-heart"></i>
-        <i class="fa-solid fa-comment"></i>
-    </div>
-
-<!-- <div class="card-text">
-    <p></p>
-</div> -->
-</div> */
