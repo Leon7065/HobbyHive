@@ -10,16 +10,27 @@
     
 </head>
 <body>
+    <!-- if there is no image: description and under that comments -->
+    
+    <div id="delete-post-overlay"></div>
+
+    <div id="delete-post-confirm">
+        <h5>Are you sure you want to delete this post?</h5>
+        <p class="no" >No</p>
+        <p class="delete" >Delete</p>
+    </div>
+
+    <div id="delete-comment-confirm">
+        <h5>Are you sure you want to delete this comment?</h5>
+        <p class="no" id="no">No</p>
+        <p class="delete" id="delete">Delete</p>
+    </div>
 
     <div class="show"><p>click</p></div>
-
     <div id="overlay"></div>
-
-    <!-- if there is no image: description and under that comments -->
-
     <div class="preview">
         <div class="post-image">
-            <img src="images/hive-bg.jpg" alt="Post Image" class="post-img">
+            <img src="images/winterfell.jpg" alt="Post Image" class="post-img">
             <p class="description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eum animi ratione nisi nihil eaque similique, sapiente laudantium voluptatibus, explicabo dolore temporibus dolorum omnis ipsa est, repellat dolorem nemo minus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odit consectetur laboriosam. Dignissimos, voluptate? Doloremque, animi. Suscipit praesentium ea quia ducimus possimus. Iste aliquam debitis ab quos nesciunt vero consequatur!
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, sunt saepe? Molestias mollitia quisquam ex distinctio ratione necessitatibus nostrum odit optio? Odio voluptatibus quam quis tenetur ab sequi doloribus numquam?
@@ -30,9 +41,12 @@
             <div class="post-profile">
                 <div class="header">
                     <img src="images/Jon_Snow.png" class="pfp" alt="Profile picture">
-                    <strong>Username</strong>
+                    <strong>ThePrinceThatWasPromised</strong>
                </div>
-               <i class="fa-solid fa-ellipsis"></i>
+                <div id="delete-post-container">
+                   <i id="delete-post-ellipsis" class="fa-solid fa-ellipsis"></i>
+                   <button id="delete-post-btn" class="delete-btns">Delete</button>
+                </div>
             </div>
 
             <hr style="margin: 2px;">
@@ -50,7 +64,10 @@
                     <div class="comment-interactions">
                         <p>timestamp</p>
                         <p>15 likes</p>
-                        <i class="fa-solid fa-ellipsis" style="transform: translateY(4px);"></i>
+                        <div class="delete-comment-container">
+                            <i class="fa-solid fa-ellipsis ellipsis" id="delete-comment-ellipsis" style="transform: translateY(4px);"></i>
+                            <button id="delete-comment-btn" class="delete-btns" >Delete</button>
+                        </div>
                     </div>
                 </div>
             </div>

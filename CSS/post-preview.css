@@ -22,13 +22,13 @@ p{
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 4;
+    z-index: 1;
     background-color: #3b3b3bad;
     display: none;
 }
 
 .preview{
-    z-index: 5;
+    z-index: 2;
     border: 1px solid black;
     width: fit-content;
     position: absolute;
@@ -186,4 +186,154 @@ button.like-button:active{
 
 .add-comment button:active{
     background-color: #313131ad;
+}
+
+/* ================================================================================================ */
+
+#delete-post-btn{
+    color: red;
+    background-color: #3b3b3bad;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    border: 2px solid #8a8a8aad;
+    display: none;
+    z-index: 3;
+    position: absolute;
+    transform: translate(-35px,-25px);
+}
+
+#delete-post-container button:active{
+    background-color: red;
+}
+
+#delete-post-container{
+    display: flex;
+    align-items: center;
+}
+
+#delete-post-confirm{
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background-color: #161616;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    /* display: flex; */
+
+}
+
+#delete-post-confirm *{
+    padding: 5px;
+    border: 2px solid #8a8a8aad;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+#delete-post-confirm p{
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#delete-post-confirm h5{
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+
+.no{
+    color:white;
+    transition: background-color 0.2s ease;
+}
+
+.no:hover{
+    background-color:#2e2e2e ;
+}
+
+
+.delete{
+    color:red;
+}
+
+.delete:hover{
+    background-color:#2e2e2e ;
+}
+
+#delete-post-overlay{
+    z-index: 9;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    background-color: #2c2c2cad;
+    display: none;
+}
+
+/* ========== */
+
+#delete-comment-btn{
+    color: red;
+    background-color: #3b3b3bad;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    border: 2px solid #8a8a8aad;
+    display: none;
+    z-index: 3;
+    transform: translate(30px,-25px);
+}
+
+#delete-comment-container button:active{
+    background-color: red;
+}
+
+#delete-comment-container{
+    display: flex;
+    align-items: center;
+}
+
+#delete-comment-confirm{
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background-color: #161616;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+#delete-comment-confirm *{
+    padding: 5px;
+    border: 2px solid #8a8a8aad;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+#delete-comment-confirm p{
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#delete-comment-confirm h5{
+    color: white;
+    padding: 10px;
+    border: none;
 }
