@@ -52,7 +52,7 @@
 
         <div class="posts">
 
-            <div class="card" id="test">
+            <div class="card">
                 <img id="card-image" src="images/winterfell.jpg" alt="Avatar">
                 <div class="interactioins">
                     <i class="fa-solid fa-heart"></i>
@@ -184,6 +184,37 @@
             <button id="post-btn" type="submit">Post</button>
         </form>
     </div>
+
+    <!-- /* =============== edit profile ============================= */ -->
+
+    <div class="edit-div">
+    <h2>Edit your profile!</h2>
+        <form>
+            <label for="image-upload">Upload an Image:</label>
+            <input type="file" id="pfp-upload" accept="image/*">
+
+            <label for="edit-username">Username:</label>
+            <input type="text" id="edit-username" placeholder="Write your new Username...">
+
+            <label for="epd">Bio:</label>
+            <textarea id="epd" placeholder="Write something about yourself..."></textarea>
+
+            <label for="eph">Select your favorite Hobbies (hold ctrl for multiple):</label>
+            <select id="eph" class="multi-select" multiple>
+                <option value="painting">Painting</option>
+                <option value="cooking">Cooking</option>
+                <option value="gaming">Gaming</option>
+                <option value="music">Music</option>
+                <option value="sports">Sports</option>
+                <option value="travel">Travel</option>
+                <option value="photography">Photography</option>
+                <option value="writing">Writing</option>
+            </select>
+
+            <button id="save-btn" type="submit">Save</button>
+        </form>
+    </div>
+
 
     <script src="JS/user.js"></script>
 </body>

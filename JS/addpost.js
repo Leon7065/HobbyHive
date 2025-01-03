@@ -54,7 +54,7 @@ postBtn.addEventListener("click", (event) => {
 
     if (isValid) {
         const form = document.querySelector(".create-post-card form");
-        form.submit(); // Submit the form programmatically
+        form.submit(); 
         hideCreatePostCard();
     }
 });

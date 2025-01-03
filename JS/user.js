@@ -1,4 +1,4 @@
-const show = document.getElementById('test'),
+const show = document.querySelectorAll(".card"),
 preview = document.querySelector(".preview"),
 overlay = document.getElementById('overlay'),
 commentLikeBtn = document.querySelector(".comment-like"),
@@ -8,10 +8,12 @@ likeText = document.querySelector('.like-text');
 
 const deleteCommentBtn = document.getElementById('delete-comment-btn');
 const deletePostBtn = document.getElementById('delete-post-btn');
-
-show.addEventListener('click',function(){
-    preview.style.display="flex";
-    overlay.style.display="block";
+ 
+show.forEach((shows) => {
+    shows.addEventListener('click',function(){
+        preview.style.display="flex";
+        overlay.style.display="block";
+    });
 });
 
 overlay.addEventListener('click',function(){
@@ -172,4 +174,70 @@ showCreatePostBtn.addEventListener('click', showCreatePostCard);
 
 overlay.addEventListener('click', hideCreatePostCard);
 
+// /* =============== edit profile ============================= */
+
+const editProfileBtn = document.getElementById('edit-btn');
+const editDiv = document.querySelector('.edit-div');
+const saveBtn = document.getElementById('save-btn');
+const EPimageUpload = document.getElementById('pfp-upload');
+const EPdescription = document.getElementById('epd');
+const EPhobbies = document.getElementById('eph');
+
+
+
+function showeditDiv() {
+    overlay.style.display = 'block';
+    editDiv.style.display = 'block';
+}
+ 
+
+function hideeditDiv() {
+    overlay.style.display = 'none';
+    editDiv.style.display = 'none';
+}
+
+
+function validateForm() {
+    const descriptionValue = EPdescription.value.trim();
+    const hobbiesSelected = Array.from(EPhobbies.selectedOptions).length > 0;
+
+    if (!descriptionValue) {
+        alert('Please write a new bio.');
+        return false;
+    }
+
+    if (!hobbiesSelected) {
+        alert('Please select at least one hobby.');
+        return false;
+    }
+
+    return true;
+}
+
+saveBtn.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    
+    const descriptionInput = document.querySelector("#epd");
+    const hobbiesSelect = document.querySelector("#eph");
+    let isValid = true;
+
+    if (!descriptionInput.value.trim()) {
+        alert("Please write a new bio.");
+        isValid = false;
+    }else if(hobbiesSelect.selectedOptions.length === 0){
+        alert("Please select at least one hobby.");
+        isValid = false;
+    }
+
+
+    if (isValid) {
+        const form = document.querySelector(".edit-div form");
+        form.submit(); 
+        hideeditDiv();
+    }
+});
+
+editProfileBtn.addEventListener('click', showeditDiv);
+
+overlay.addEventListener('click', hideeditDiv);
 
