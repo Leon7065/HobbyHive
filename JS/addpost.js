@@ -11,7 +11,7 @@ function showCreatePostCard() {
     overlay.style.display = 'block';
     createPostCard.style.display = 'block';
 }
-
+ 
 
 function hideCreatePostCard() {
     overlay.style.display = 'none';

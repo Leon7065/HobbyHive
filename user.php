@@ -18,7 +18,7 @@
             <li id="nav-bar-options"><a href=""><i class="fa-regular fa-message"></i> Messages</a></li>
             <li id="nav-bar-options"><a href=""><i class="fa-regular fa-envelope"></i> Notifications</a></li>
             <li id="nav-bar-options"><a href=""><i class="fa-solid fa-gear"></i> Settings</a></li>
-            <li id="nav-bar-options"><a href=""><i class="fa-solid fa-plus"></i> Add post</a></li>
+            <li id="nav-bar-options" class="show-create-post-btn"><i class="fa-solid fa-plus"></i> Add post</li>
             <!-- <li id="nav-bar-options"><a href=""><i class="fa-solid fa-house"></i> Profile</a></li> -->
         </ul>
         <p id="log-out"><a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a></p>
@@ -157,8 +157,33 @@
         </div>
     </div>
 
+    <!-- ========================================== add post  -->
 
+ 
+    <div class="create-post-card">
+        <h2>Create a Post</h2>
+        <form>
+            <label for="image-upload">Upload an Image:</label>
+            <input type="file" id="image-upload" accept="image/*">
 
+            <label for="create-post-t">Description:</label>
+            <textarea id="create-post-t" placeholder="Write something about your post..."></textarea>
+
+            <label for="create-hobbies">Select Hobbies(hold ctrl for multiple):</label>
+            <select id="create-hobbies" class="multi-select" multiple>
+                <option value="painting">Painting</option>
+                <option value="cooking">Cooking</option>
+                <option value="gaming">Gaming</option>
+                <option value="music">Music</option>
+                <option value="sports">Sports</option>
+                <option value="travel">Travel</option>
+                <option value="photography">Photography</option>
+                <option value="writing">Writing</option>
+            </select>
+
+            <button id="post-btn" type="submit">Post</button>
+        </form>
+    </div>
 
     <script src="JS/user.js"></script>
 </body>

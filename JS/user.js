@@ -104,3 +104,72 @@ function hideC(){
 deletePostOverlay.addEventListener('click',hideC);
 noC.addEventListener('click',hideC);
 deleteC.addEventListener('click',hideC);
+
+
+// ================================================ Add post
+
+const showCreatePostBtn = document.querySelector(".show-create-post-btn");
+const createPostCard = document.querySelector('.create-post-card');
+const postBtn = document.getElementById('post-btn');
+const imageUpload = document.getElementById('image-upload');
+const description = document.getElementById('create-post-t');
+const hobbies = document.getElementById('create-hobbies');
+
+
+function showCreatePostCard() {
+    overlay.style.display = 'block';
+    createPostCard.style.display = 'block';
+}
+ 
+
+function hideCreatePostCard() {
+    overlay.style.display = 'none';
+    createPostCard.style.display = 'none';
+}
+
+
+function validateForm() {
+    const descriptionValue = description.value.trim();
+    const hobbiesSelected = Array.from(hobbies.selectedOptions).length > 0;
+
+    if (!descriptionValue) {
+        alert('Please enter a description.');
+        return false;
+    }
+
+    if (!hobbiesSelected) {
+        alert('Please select at least one hobby.');
+        return false;
+    }
+
+    return true;
+}
+
+postBtn.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    
+    const descriptionInput = document.querySelector("#create-post-t");
+    const hobbiesSelect = document.querySelector("#create-hobbies");    
+    let isValid = true;
+
+    if (!descriptionInput.value.trim()) {
+        alert("Please write a description.");
+        isValid = false;
+    }else if(hobbiesSelect.selectedOptions.length === 0){
+        alert("Please select at least one hobby.");
+        isValid = false;
+    }
+
+
+    if (isValid) {
+        const form = document.querySelector(".create-post-card form");
+        form.submit(); 
+        hideCreatePostCard();
+    }
+});
+
+showCreatePostBtn.addEventListener('click', showCreatePostCard);
+
+overlay.addEventListener('click', hideCreatePostCard);
+
+
