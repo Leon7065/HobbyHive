@@ -27,6 +27,7 @@
     </div>
 
     <div class="show"><p>click</p></div>
+    
     <div id="overlay"></div>
     <div class="preview">
         <div class="post-image">
