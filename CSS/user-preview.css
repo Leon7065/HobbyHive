@@ -1,0 +1,608 @@
+@font-face {
+    font-family: Josefin Slab;
+    src: url(../fonts/Josefin_Slab/JosefinSlab-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Josefin Slab bold;
+    src: url(../fonts/Josefin_Slab/static/JosefinSlab-SemiBold.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #3b3b3b;
+}
+
+.left {
+    padding: 10vh 10vh 0vh 5vh;
+    color: white;
+}
+
+.left a:active{
+    text-decoration: underline;
+}
+
+.left h1 {
+    margin-bottom: 6vh;
+}
+
+#title {
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+}
+
+#nav-bar-ul {
+    list-style-type: none;
+}
+
+#nav-bar-options, #log-out {
+    padding: 2vh;
+    margin: 1.5vh;
+    border-radius: 7px;
+    font-size: larger;
+    transition: background-color 0.3s ease;
+}
+
+#nav-bar-options:hover, #log-out:hover {
+    background-color: #5a533a;
+}
+
+#nav-bar-options a, #log-out a {
+    text-decoration: none;
+    color: white;
+}
+
+#left-right-hr {
+    height: auto;
+    border-color: #FFDA44;
+}
+
+.right {
+    padding: 15vh;
+    flex-grow: 3;
+}
+
+#pfp {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#profile {
+    display: flex;
+}
+
+#profile-txt {
+    padding-left: 10vh;
+    font-size:5vh;
+    color: white;
+}
+
+#u-e-container {
+    display: flex;
+}
+
+#profile-txt p {
+    padding: 3.5vh;
+}
+
+
+#follow-btn {
+    margin: 4vh;
+    margin-left: 20vh;
+    width: 30vh;
+    height: 5vh;
+    background-color: #FFDA44;
+    border: none;
+    font-size: 18px;
+    font-family: Josefin Slab bold;
+    border-radius: 7px;
+    transition: background-color 0.2s ;
+}
+
+#follow-btn:hover {
+    background-color: #b69c34;
+}
+
+#follow-btn:active {
+    background-color: #FFDA44;
+}
+
+#activity {
+     list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#activity li {
+    padding: 2vh;
+    padding-top: 4vh;
+    font-size:5vh;
+    color: white;
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .left {
+        padding: 2vh 5vw;
+    }
+
+    #left-right-hr {
+        display: none;
+    }
+
+    .right {
+        padding: 5vh 5vw;
+    }
+
+    #pfp {
+        width: 100px;
+        height: 100px;
+    }
+
+    #profile-txt {
+        font-size: 2.5vh;
+    }
+
+    #profile-txt p{
+        padding: 0;
+    }
+
+    #activity {
+        font-size: 2vh;
+    }
+
+    #activity li {
+        padding: 1vh;
+        padding-top: 2vh;
+        font-size:2.5vh;
+    }
+
+    #follow-btn {
+        width: 50%;
+        text-align: center;
+        margin: 0 0 0 10vh;
+    }
+}
+
+@media (max-width: 480px) {
+    #profile-txt {
+        font-size: 2vh;
+        padding-left: 0;
+    }
+
+    #profile-txt *{
+        padding-left: 0;
+    }
+
+    #follow-btn {
+        width: 100%;
+        text-align: center;
+        margin:0 2vh 0 0;
+    }
+
+    #activity {
+        flex-direction: column;
+        align-items: center;
+    }
+} 
+
+.posts{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card{
+    margin: auto;
+    margin-top: 2vh;
+    width: 45vh;
+    height: 43vh;
+    transition: 0.3s ease;     
+}
+
+.card:hover {
+    transform: scale(1.05); 
+}
+
+#card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 4px;
+    cursor:pointer;   
+
+}
+
+.interactioins {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 20px; 
+    opacity: 0; 
+    font-size: 24px; 
+    color: white;
+}
+
+.card:hover .interactioins {
+    opacity: 1; 
+}
+
+/* =================================== post preview =================================== */
+
+
+#overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 5;
+    background-color: #2c2c2cad;
+    display: none;
+}
+
+.preview{
+    z-index: 6;
+    border: 1px solid black;
+    width: fit-content;
+    position: fixed;
+    margin: 2vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #303030bb;
+    backdrop-filter: blur(10px);
+    color: white;
+    /* display: flex; */
+    display: none;
+}    
+
+.post-content{
+    padding: 0 15px;
+    width: fit-content;
+    width: 400px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.post-profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    padding-left: 0;
+}
+
+.description{
+    max-width: 500px;
+    overflow-y: scroll;
+    height: 26vh;
+}
+
+.post-img {
+    height: auto;
+    object-fit: cover;
+    max-width: 500px;
+    border-radius: 15px 0 / 15px ;
+    padding-bottom: 15px;
+} 
+
+.pfp {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    object-fit:cover;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.comments{
+    padding:15px ;
+    padding-left: 0;
+    overflow-y: scroll;
+    height: 220px;
+}
+
+.comment{
+    margin-bottom: 30px;
+}
+
+.comment-like-active{
+    color: red;
+}
+
+.fa-heart{
+    margin-left: 5px;
+}
+
+.comment-content{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.comment-text{
+    display: flex;
+}
+
+.comment-text p {
+    margin-bottom: 0;
+}
+
+.comment-interactions{
+    display: flex;
+    justify-content: space-around;
+}
+
+.interactivity{
+    padding: 8px;
+    padding-left: 0;
+}
+
+.like-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like-button{
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: inherit;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button.like-button:active{
+    background-color: red;
+}
+
+.like-button:hover{
+    background-color: #646464ad;
+}
+
+.add-comment{
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    
+}   
+
+.add-comment input{
+    border: none;
+    padding: 5px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: inherit;
+    color: white;
+}
+
+.add-comment input::placeholder{
+    color: white;
+} 
+
+.add-comment button{
+    width: 20%;
+    border: none;
+    border-radius: 10px;
+    padding-bottom: 4px;
+    transition: background-color 0.3s ease;
+    color: white;
+    background: inherit;
+    margin-left: 5px;
+}
+
+.add-comment button:hover{
+    background-color: #646464ad;
+}
+
+.add-comment button:active{
+    background-color: #313131ad;
+}
+
+/* ================================================================================================ */
+
+
+#no{
+    color:white;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+#no:hover{
+    background-color:#2e2e2e ;
+}
+
+
+#delete{
+    color:red;
+    cursor: pointer;
+}
+
+#delete:hover{
+    background-color:#2e2e2e ;
+}
+
+#delete-comment-overlay{
+    z-index: 9;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    background-color: #2c2c2cad;
+    display: none;
+}
+
+/* ========== */
+
+#delete-comment-btn{
+    color: red;
+    background-color: #3b3b3bad;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    border: 2px solid #8a8a8aad;
+    z-index: 20;
+    transform: translate(30px,-25px);
+    display: none;
+}
+
+#delete-comment-btn:hover{
+    background-color: #5a5a5aad;
+}
+#delete-comment-btn:active{
+    background-color: #3b3b3bad;
+}
+
+#delete-comment-container button:active{
+    background-color: red;
+}
+
+#delete-comment-container{
+    display: flex;
+    align-items: center;
+}
+
+#delete-comment-confirm{
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    background-color: #161616;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+#delete-comment-confirm *{
+    padding: 5px;
+    border: 2px solid #8a8a8aad;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+#delete-comment-confirm p{
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#delete-comment-confirm h5{
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+/* ================================= ADD post =================================== */
+
+.show-create-post-btn{
+    cursor: pointer;
+}
+
+.create-post-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #3b3b3bad;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    backdrop-filter: blur(8px);
+    color: white;
+    display: none;
+    z-index: 15;
+}
+
+.create-post-card h2 {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.create-post-card label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.create-post-card input,
+.create-post-card textarea,
+.create-post-card select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+ 
+.create-post-card textarea {
+    width: 95%;
+    resize: none;
+    height: 100px;
+}
+
+.create-post-card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5a533a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-post-card button:hover {
+    background-color: #4a452e;
+}
+
+.create-post-card .multi-select {
+    height: auto;
+    max-height: 100px;
+    overflow-y: scroll;
+}
+
+.create-post-card input[type="file"] {
+    padding: 0;
+}
+
+/* =============== edit profile ============================= */
+

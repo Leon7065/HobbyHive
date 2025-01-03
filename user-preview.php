@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Username</title>
+    <title>other Username</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" >
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" > -->
-    <link rel="stylesheet" href="CSS/user.css">
+    <link rel="stylesheet" href="CSS/user-preview.css">
 </head>
 <body>
  
@@ -33,7 +33,7 @@
             <span id="profile-txt">
                 <span id="u-e-container">
                     <p id="username">Username</p>
-                    <button id="edit-btn">Edit Profile</button>
+                    <button id="follow-btn">Follow</button>
                 </span>
                 
                 <p id="bio">Your bio goes here!</p>
@@ -42,9 +42,15 @@
         </div>    
         
         <ul id="activity">
-            <li><strong>15</strong> Posts</li>
-            <li><strong>15</strong> Following</li>
-            <li><strong>15</strong> Followers</li>
+            <li>
+                <strong>15</strong> Posts
+            </li>
+            <li>
+                <strong>15</strong> Following
+            </li>
+            <li>
+                <strong>15</strong> Followers
+            </li>
         </ul>
         <hr>    
 
@@ -82,18 +88,12 @@
 
     <!-- post preview -->
 
-    <div id="delete-post-overlay"></div>
-
-    <div id="delete-post-confirm">
-        <h5>Are you sure you want to delete this post?</h5>
-        <p class="no" >No</p>
-        <p class="delete" >Delete</p>
-    </div>
+    <div id="delete-comment-overlay"></div>
 
     <div id="delete-comment-confirm">
         <h5>Are you sure you want to delete this comment?</h5>
-        <p class="no" id="no">No</p>
-        <p class="delete" id="delete">Delete</p>
+        <p id="no">No</p>
+        <p id="delete">Delete</p>
     </div>
 
     <div id="overlay"></div>
@@ -113,8 +113,8 @@
                     <strong>username</strong>
                </div>
                 <div id="delete-post-container">
-                   <i id="delete-post-ellipsis" class="fa-solid fa-ellipsis"></i>
-                   <button id="delete-post-btn" class="delete-btns">Delete</button>
+                   <!-- <i id="delete-post-ellipsis" class="fa-solid fa-ellipsis"></i> -->
+                   <!-- <button id="delete-post-btn" class="delete-btns">Delete</button> -->
                 </div>
             </div>
 
@@ -187,35 +187,9 @@
 
     <!-- /* =============== edit profile ============================= */ -->
 
-    <div class="edit-div">
-    <h2>Edit your profile!</h2>
-        <form>
-            <label for="image-upload">Upload an Image:</label>
-            <input type="file" id="pfp-upload" accept="image/*">
-
-            <label for="edit-username">Username:</label>
-            <input type="text" id="edit-username" placeholder="Write your new Username...">
-
-            <label for="epd">Bio:</label>
-            <textarea id="epd" placeholder="Write something about yourself..."></textarea>
-
-            <label for="eph">Select your favorite Hobbies (hold ctrl for multiple):</label>
-            <select id="eph" class="multi-select" multiple>
-                <option value="painting">Painting</option>
-                <option value="cooking">Cooking</option>
-                <option value="gaming">Gaming</option>
-                <option value="music">Music</option>
-                <option value="sports">Sports</option>
-                <option value="travel">Travel</option>
-                <option value="photography">Photography</option>
-                <option value="writing">Writing</option>
-            </select>
-
-            <button id="save-btn" type="submit">Save</button>
-        </form>
-    </div>
+  
 
 
-    <script src="JS/user.js"></script>
+    <script src="JS/user-preview.js"></script>
 </body>
 </html>

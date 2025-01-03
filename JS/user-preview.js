@@ -7,7 +7,6 @@ likeBtn = document.querySelector(".like-button"),
 likeText = document.querySelector('.like-text');
 
 const deleteCommentBtn = document.getElementById('delete-comment-btn');
-const deletePostBtn = document.getElementById('delete-post-btn');
  
 show.forEach((shows) => {
     shows.addEventListener('click',function(){
@@ -20,7 +19,6 @@ overlay.addEventListener('click',function(){
     preview.style.display="none";
     overlay.style.display="none";
     deleteCommentBtn.style.display="none";
-    deletePostBtn.style.display="none";
 });
 
 commentLikeBtn.addEventListener('click',function(){
@@ -41,42 +39,6 @@ likeBtn.addEventListener('click',function(){
     }
 });
 
-
-
-const deletePostDiv = document.getElementById('delete-post-ellipsis');
-
-
-deletePostDiv.addEventListener('click', () => {
-    if (deletePostBtn.style.display === "none") {
-
-        deletePostBtn.style.display="block";
-    } else {
-        deletePostBtn.style.display="none";
-    }
-});
-
-const deletePostOverlay = document.getElementById('delete-post-overlay'),
-deletePostConfirm = document.getElementById('delete-post-confirm'),
-no = document.querySelector(".no"),
-yes = document.querySelector(".delete");
-
-
-deletePostBtn.addEventListener('click',() =>{
-    deletePostConfirm.style.display = "flex";
-    deletePostOverlay.style.display="block";
-});
-
-function hide(){
-    deletePostConfirm.style.display = "none";
-    deletePostOverlay.style.display="none";
-}
-
-deletePostOverlay.addEventListener('click',hide);
-no.addEventListener('click',hide);
-yes.addEventListener('click',hide);
-
-// 
-
 const deleteCommentDiv = document.getElementById('delete-comment-ellipsis');
 
 deleteCommentDiv.addEventListener('click', () => {
@@ -90,20 +52,21 @@ deleteCommentDiv.addEventListener('click', () => {
 });
 
 const deleteCommentConfirm = document.getElementById('delete-comment-confirm'),
+deleteCommentOverlay = document.getElementById ('delete-comment-overlay'),
 noC = document.getElementById('no'),
 deleteC = document.getElementById('delete');
 
 deleteCommentBtn.addEventListener('click',() =>{
     deleteCommentConfirm.style.display = "flex";
-    deletePostOverlay.style.display="block";
+    deleteCommentOverlay.style.display="block";
 });
 
 function hideC(){
     deleteCommentConfirm.style.display = "none";
-    deletePostOverlay.style.display="none";
+    deleteCommentOverlay.style.display="none";
 }
 
-deletePostOverlay.addEventListener('click',hideC);
+deleteCommentOverlay.addEventListener('click',hideC);
 noC.addEventListener('click',hideC);
 deleteC.addEventListener('click',hideC);
 
@@ -154,48 +117,20 @@ showCreatePostBtn.addEventListener('click', showCreatePostCard);
 
 overlay.addEventListener('click', hideCreatePostCard);
 
-// /* =============== edit profile ============================= */
+// /* =============== follow profile ============================= */
 
-const editProfileBtn = document.getElementById('edit-btn');
-const editDiv = document.querySelector('.edit-div');
-const saveBtn = document.getElementById('save-btn');
+const followBtn=document.getElementById('follow-btn');
 
-const EPimageUpload = document.getElementById('pfp-upload');
-const EPdescription = document.getElementById('epd');
-const EPhobbies = document.getElementById('eph');
-const username = document.getElementById('edit-username');
-
-function showeditDiv() {
-    overlay.style.display = 'block';
-    editDiv.style.display = 'block';
-}
- 
-
-function hideeditDiv() {
-    overlay.style.display = 'none';
-    editDiv.style.display = 'none';
-}
-
-saveBtn.addEventListener("click", (event) => {
-    event.preventDefault(); 
-    
-    let isValid = true;
-
-    if (!EPdescription.value.trim() && EPhobbies.selectedOptions.length === 0
-    && !username.value.trim() && !EPimageUpload.value) {
-        alert("At least one field should be different.");
-        isValid = false;
-    }
-
-
-    if (isValid) {
-        const form = document.querySelector(".edit-div form");
-        form.submit(); 
-        hideeditDiv();
+followBtn.addEventListener('click',()=>{
+    if(followBtn.textContent==='Follow'){
+        followBtn.textContent='Following';
+        followBtn.style.backgroundColor='rgb(20, 20, 20)';
+        followBtn.style.color='#ffda44';
+    }else{
+        followBtn.textContent='Follow';
+        followBtn.style.backgroundColor='#FFDA44';
+        followBtn.style.color='black';
     }
 });
 
-editProfileBtn.addEventListener('click', showeditDiv);
-
-overlay.addEventListener('click', hideeditDiv);
 
