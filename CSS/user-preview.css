@@ -470,7 +470,7 @@ button.like-button:active{
     font-weight: bold;
     border: 2px solid #8a8a8aad;
     z-index: 20;
-    transform: translate(30px,-25px);
+    transform: translate(30px,-23px);
     display: none;
 }
 

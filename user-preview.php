@@ -112,10 +112,6 @@
                     <img src="images/Jon_Snow.png" class="pfp" alt="Profile picture">
                     <strong>username</strong>
                </div>
-                <div id="delete-post-container">
-                   <!-- <i id="delete-post-ellipsis" class="fa-solid fa-ellipsis"></i> -->
-                   <!-- <button id="delete-post-btn" class="delete-btns">Delete</button> -->
-                </div>
             </div>
 
             <hr style="margin: 2px;">
