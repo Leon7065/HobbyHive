@@ -8,55 +8,55 @@ const hobbies = document.getElementById('hobbies');
 
 
 function showCreatePostCard() {
-    overlay.style.display = 'block';
-    createPostCard.style.display = 'block';
+  overlay.style.display = 'block';
+  createPostCard.style.display = 'block';
 }
- 
+
 
 function hideCreatePostCard() {
-    overlay.style.display = 'none';
-    createPostCard.style.display = 'none';
+  overlay.style.display = 'none';
+  createPostCard.style.display = 'none';
 }
 
 
 function validateForm() {
-    const descriptionValue = description.value.trim();
-    const hobbiesSelected = Array.from(hobbies.selectedOptions).length > 0;
+  const descriptionValue = description.value.trim();
+  const hobbiesSelected = Array.from(hobbies.selectedOptions).length > 0;
 
-    if (!descriptionValue) {
-        alert('Please enter a description.');
-        return false;
-    }
+  if (!descriptionValue) {
+    alert('Please enter a description.');
+    return false;
+  }
 
-    if (!hobbiesSelected) {
-        alert('Please select at least one hobby.');
-        return false;
-    }
+  if (!hobbiesSelected) {
+    alert('Please select at least one hobby.');
+    return false;
+  }
 
-    return true;
+  return true;
 }
 
 postBtn.addEventListener("click", (event) => {
-    event.preventDefault(); 
-    
-    const descriptionInput = document.querySelector("#description");
-    const hobbiesSelect = document.querySelector("#hobbies");
-    let isValid = true;
+  event.preventDefault();
 
-    if (!descriptionInput.value.trim()) {
-        alert("Please write a description.");
-        isValid = false;
-    }else if(hobbiesSelect.selectedOptions.length === 0){
-        alert("Please select at least one hobby.");
-        isValid = false;
-    }
+  const descriptionInput = document.querySelector("#description");
+  const hobbiesSelect = document.querySelector("#hobbies");
+  let isValid = true;
+
+  if (!descriptionInput.value.trim()) {
+    alert("Please write a description.");
+    isValid = false;
+  } else if (hobbiesSelect.selectedOptions.length === 0) {
+    alert("Please select at least one hobby.");
+    isValid = false;
+  }
 
 
-    if (isValid) {
-        const form = document.querySelector(".create-post-card form");
-        form.submit(); 
-        hideCreatePostCard();
-    }
+  if (isValid) {
+    const form = document.querySelector(".create-post-card form");
+    form.submit();
+    hideCreatePostCard();
+  }
 });
 
 showCreatePostBtn.addEventListener('click', showCreatePostCard);

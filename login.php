@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - www.codingnepalweb.com -->
 <html>
 <head>
   <meta charset="UTF-8">
@@ -10,7 +9,6 @@
 <body>
   <div class="wrapper">
     <form action="#">
-      <!-- <h2>Login</h2> -->
       
       <div class="title">
         <h2>Login</h2>
@@ -32,11 +30,8 @@
           <input type="checkbox" id="remember">
           <p>Remember me</p>
         </label>
-        <a href="#" class="links">Forgot password?</a>
       </div>
-      
       <input type="submit" class="button" value="Log In">
-      
       <div class="register">
         <p>Don't have an account? <a class="links" href="signup.php">Register</a></p>
       </div>

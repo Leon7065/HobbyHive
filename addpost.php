@@ -33,10 +33,8 @@
                 <option value="photography">Photography</option>
                 <option value="writing">Writing</option>
             </select>
-
             <button id="post-btn" type="submit">Post</button>
         </form>
     </div>
-    <script src="JS/addpost.js"></script>
 </body>
 </html>
